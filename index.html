@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images</title>
+    <meta
+      name="description"
+      content="Project page for the IROS 2021 paper Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images"
+    />
+    <meta
+      property="og:description"
+      content="IROS 2021 paper on fast unsupervised non-local feature learning for medical direct volume rendering."
+    />
+    <meta property="og:image" content="assets/real-results/result-tooth-ct-comparison.png" />
+    <meta property="article:published_time" content="2021-09-27" />
+    <meta
+      name="citation_title"
+      content="Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images"
+    />
+    <meta name="citation_author" content="Fu, Xinmei" />
+    <meta name="citation_author" content="Shao, Zhenzhou" />
+    <meta name="citation_author" content="Qu, Ying" />
+    <meta name="citation_author" content="Guan, Yong" />
+    <meta name="citation_author" content="Zou, Yibo" />
+    <meta name="citation_author" content="Shi, Zhiping" />
+    <meta name="citation_author" content="Tan, Jindong" />
+    <meta name="citation_publication_date" content="2021/09/27" />
+    <meta name="citation_conference_title" content="2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)" />
+    <meta name="citation_firstpage" content="5886" />
+    <meta name="citation_lastpage" content="5891" />
+    <meta name="citation_doi" content="10.1109/IROS51168.2021.9636042" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images",
+        "headline": "Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images",
+        "datePublished": "2021-09-27",
+        "pagination": "5886-5891",
+        "doi": "10.1109/IROS51168.2021.9636042",
+        "url": "https://doi.org/10.1109/IROS51168.2021.9636042",
+        "isPartOf": {
+          "@type": "PublicationIssue",
+          "name": "2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+        },
+        "author": [
+          { "@type": "Person", "name": "Xinmei Fu" },
+          { "@type": "Person", "name": "Zhenzhou Shao" },
+          { "@type": "Person", "name": "Ying Qu" },
+          { "@type": "Person", "name": "Yong Guan" },
+          { "@type": "Person", "name": "Yibo Zou" },
+          { "@type": "Person", "name": "Zhiping Shi" },
+          { "@type": "Person", "name": "Jindong Tan" }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__image" role="img" aria-label="Tooth CT visualization comparison from the paper"></div>
+      <nav class="nav" aria-label="Project page navigation">
+        <a href="#method">Method</a>
+        <a href="#visuals">Results</a>
+        <a href="#cite">Citation</a>
+      </nav>
+      <div class="hero__content">
+        <p class="venue">IROS 2021 | Medical Direct Volume Rendering</p>
+        <h1>Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images</h1>
+        <p class="authors">
+          Xinmei Fu, Zhenzhou Shao, Ying Qu, Yong Guan, Yibo Zou, Zhiping Shi, and Jindong Tan
+        </p>
+        <div class="actions" aria-label="Primary links">
+          <a class="button button--primary" href="https://doi.org/10.1109/IROS51168.2021.9636042">Paper</a>
+          <a class="button" href="#cite">BibTeX</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary" aria-labelledby="summary-title">
+        <div class="section-inner summary__grid">
+          <div>
+            <p class="eyebrow">Paper Summary</p>
+            <h2 id="summary-title">Fast feature learning for medical DVR</h2>
+          </div>
+          <div class="summary-points" aria-label="Paper highlights">
+            <p>
+              <strong>Problem</strong>
+              Hand-crafted features can miss subtle structures in medical direct volume rendering.
+            </p>
+            <p>
+              <strong>Approach</strong>
+              The paper uses an unsupervised 3D-CNN autoencoder with non-local feature learning and
+              a sparse constraint.
+            </p>
+            <p>
+              <strong>Output</strong>
+              Extracted features are fused with position and Hessian information for voxel
+              classification and transfer-function design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" aria-labelledby="method-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Method Overview</p>
+            <h2 id="method-title">From 3D volume to feature-aware rendering</h2>
+          </div>
+          <figure class="method-figure">
+            <img src="assets/real-results/paper-method-overview.png" alt="Paper method overview figures for NL-SAE medical visualization and 3D convolutional autoencoder non-local feature learning." />
+            <figcaption>
+              Overview of the NL-SAE visualization pipeline and the 3D convolutional autoencoder used for non-local feature learning.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="visuals" class="visuals" aria-labelledby="visuals-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Experimental Results</p>
+            <h2 id="visuals-title">Datasets and rendering comparisons</h2>
+            <p>
+              Selected figures show the tooth CT visualization comparison, the volume datasets used
+              in the experiments, and comparisons with prior visualization methods.
+            </p>
+          </div>
+          <div class="visual-grid">
+            <figure>
+              <img src="assets/real-results/result-tooth-ct-comparison.png" alt="Tooth CT visualization comparison from the paper showing Kniss et al., Soundararajan et al., and the proposed method." />
+              <figcaption>Fig. 1: Tooth CT visualization comparison</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/real-results/result-volume-data.png" alt="Experiment volume data from the paper: tooth micro CT, bonsai CT, and kiwi MRI." />
+              <figcaption>Fig. 7: Volume data used in the experiments</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/real-results/result-state-of-art-comparison.png" alt="Visualization comparison table from the paper across tooth, bonsai, and kiwi data." />
+              <figcaption>Table I: State-of-the-art visualization comparison</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="why" aria-labelledby="why-title">
+        <div class="section-inner why__grid">
+          <div>
+            <p class="eyebrow">Research Positioning</p>
+            <h2 id="why-title">Where this work fits</h2>
+          </div>
+          <div class="context-list" aria-label="Research context">
+            <p>
+              <strong>Medical volume rendering</strong>
+              Fast transfer-function design for CT/MRI visualization where manual feature selection
+              can be time-consuming.
+            </p>
+            <p>
+              <strong>Unsupervised feature learning</strong>
+              Non-local voxel representations learned without labels, paired with a sparse
+              constraint for discriminative feature extraction.
+            </p>
+            <p>
+              <strong>Feature-aware visualization</strong>
+              Learned features combined with position and Hessian information for voxel
+              classification and direct volume rendering.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cite" class="cite" aria-labelledby="cite-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Citation</p>
+            <h2 id="cite-title">BibTeX</h2>
+          </div>
+          <div class="bibtex-block">
+            <pre id="bibtex"><code>@inproceedings{fu2021fast,
+  title={Fast and Unsupervised Non-Local Feature Learning for Direct Volume Rendering of 3D Medical Images},
+  author={Fu, Xinmei and Shao, Zhenzhou and Qu, Ying and Guan, Yong and Zou, Yibo and Shi, Zhiping and Tan, Jindong},
+  booktitle={2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={5886--5891},
+  year={2021},
+  organization={IEEE},
+  doi={10.1109/IROS51168.2021.9636042}
+}</code></pre>
+            <button class="copy-button" type="button" data-copy-target="bibtex">Copy BibTeX</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section-inner footer__inner">
+        <p>2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</p>
+        <a href="https://doi.org/10.1109/IROS51168.2021.9636042">10.1109/IROS51168.2021.9636042</a>
+      </div>
+    </footer>
+
+    <script>
+      const copyButton = document.querySelector("[data-copy-target]");
+      copyButton?.addEventListener("click", async () => {
+        const target = document.getElementById(copyButton.dataset.copyTarget);
+        const text = target?.innerText || "";
+        try {
+          await navigator.clipboard.writeText(text);
+          copyButton.textContent = "Copied";
+          window.setTimeout(() => {
+            copyButton.textContent = "Copy BibTeX";
+          }, 1600);
+        } catch {
+          copyButton.textContent = "Select BibTeX";
+        }
+      });
+    </script>
+  </body>
+</html>
